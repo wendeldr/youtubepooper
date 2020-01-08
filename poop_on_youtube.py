@@ -169,17 +169,17 @@ def poop():
                      print('\nMan this package is kinda poopy.')
             else:
                 print('\nHello error. Goodbye Segment.')
-        # try:
-        final = CompositeVideoClip(clips)
-        final.write_videofile(f"{v[:-4]}--pooped.mp4", write_logfile=True,
-                            preset='ultrafast',
-                            temp_audiofile='temp-audio.mp3',
-                            audio=True,
-                            remove_temp=True)
-    # except:
-        #     for x in range(0, 100):
-        #         print('\n:(')
-        #     webbrowser.open_new('https://www.youtube.com/watch?v=IMYbjyKWaak')
+         try:
+            final = CompositeVideoClip(clips)
+            final.write_videofile(f"{v[:-4]}--pooped.mp4", write_logfile=True,
+                                preset='ultrafast',
+                                temp_audiofile='temp-audio.mp3',
+                                audio=True,
+                                remove_temp=True)
+          except:
+             for x in range(0, 100):
+                 print('\n:(')
+             webbrowser.open_new('https://www.youtube.com/watch?v=IMYbjyKWaak')
 
 
 def parse_and_download():
@@ -194,6 +194,6 @@ def parse_and_download():
             print('lul download failed u sux')
 
 if __name__ == "__main__":
-    # main()
-    # parse_and_download()
+    main()
+    parse_and_download()
     poop()
